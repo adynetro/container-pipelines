@@ -88,14 +88,14 @@ pipeline {
     }
 
     // Perform Static Code Analysis using SonarQube
-    stage ('Code Analysis') {
-        steps {
-          sonarqubeStaticAnalysis(
-            pomFile: "${POM_FILE}",
-            buildServerWebHookName: "jenkins"
-          )
-        }
-    }
+    //stage ('Code Analysis') {
+      //  steps {
+        //  sonarqubeStaticAnalysis(
+          //  pomFile: "${POM_FILE}",
+           // buildServerWebHookName: "jenkins"
+      //    )
+       // }
+    //}
 
     // Build Container Image using the artifacts produced in previous stages
     stage('Build Container Image'){
